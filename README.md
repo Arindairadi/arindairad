@@ -1,6 +1,4 @@
-Here's a short professional essay description about you as a computer scientist and AI developer:
 
----
 
 ## About Arinda Iradi
 
