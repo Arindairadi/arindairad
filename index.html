@@ -1,33 +1,1014 @@
-<?php
-$pageTitle = "Arinda Iradi | Computer Scientist & AI Developer";
-$pageDescription = "Arinda Iradi is a computer scientist, AI developer, and data science enthusiast specializing in machine learning, web development, and digital innovation.";
-$pageUrl = "https://arindairadi.dev";
-$pageImage = "https://arindairadi.dev/images/profile.jpg";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><?php echo $pageTitle; ?></title>
-  <meta name="description" content="<?php echo $pageDescription; ?>" />
+  <title>Arinda Iradi | Computer Scientist & AI Developer</title>
+  <meta name="description" content="Arinda Iradi is a computer scientist, AI developer, and data science enthusiast specializing in machine learning, web development, and digital innovation." />
   <meta name="keywords" content="Arinda Iradi, Computer Scientist, AI Developer, Data Science, Machine Learning, Web Developer, Uganda" />
   <meta name="author" content="Arinda Iradi" />
-  <link rel="canonical" href="<?php echo $pageUrl; ?>" />
+  <link rel="canonical" href="https://arindairadi.dev" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="<?php echo $pageTitle; ?>" />
-  <meta property="og:description" content="<?php echo $pageDescription; ?>" />
-  <meta property="og:image" content="<?php echo $pageImage; ?>" />
-  <meta property="og:url" content="<?php echo $pageUrl; ?>" />
+  <meta property="og:title" content="Arinda Iradi | Computer Scientist & AI Developer" />
+  <meta property="og:description" content="Arinda Iradi is a computer scientist, AI developer, and data science enthusiast specializing in machine learning, web development, and digital innovation." />
+  <meta property="og:image" content="https://arindairadi.dev/images/profile.jpg" />
+  <meta property="og:url" content="https://arindairadi.dev" />
   <meta property="og:type" content="profile" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="<?php echo $pageTitle; ?>" />
-  <meta name="twitter:description" content="<?php echo $pageDescription; ?>" />
-  <meta name="twitter:image" content="<?php echo $pageImage; ?>" />
+  <meta name="twitter:title" content="Arinda Iradi | Computer Scientist & AI Developer" />
+  <meta name="twitter:description" content="Arinda Iradi is a computer scientist, AI developer, and data science enthusiast specializing in machine learning, web development, and digital innovation." />
+  <meta name="twitter:image" content="https://arindairadi.dev/images/profile.jpg" />
 
   <!-- Fonts & Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --light: #f5f7fa;
+      --gray: #6b7280;
+      --white: #ffffff;
+      --border: #e5e7eb;
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+      --radius: 20px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--primary);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 8px 24px rgba(26, 26, 46, 0.15);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(26, 26, 46, 0.25);
+      background: var(--secondary);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+      box-shadow: none;
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .btn-accent {
+      background: var(--highlight);
+      box-shadow: 0 8px 24px rgba(233, 69, 96, 0.25);
+    }
+
+    .btn-accent:hover {
+      background: #c73e54;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: var(--highlight);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      font-weight: 500;
+      color: var(--gray);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--highlight);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      padding: 100px 0 70px;
+      background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(233, 69, 96, 0.1);
+      color: var(--highlight);
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      margin-bottom: 24px;
+      border: 1px solid rgba(233, 69, 96, 0.2);
+    }
+
+    .hero h1 {
+      font-family: 'Merriweather', serif;
+      font-size: clamp(2.6rem, 6vw, 4.6rem);
+      line-height: 1.08;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 .highlight-text {
+      color: var(--highlight);
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--gray);
+      max-width: 620px;
+      margin-bottom: 12px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    .hero-image {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 12px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .hero-image img {
+      border-radius: calc(var(--radius) - 8px);
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      background: #e5e9f0;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .hero-stats .stat {
+      text-align: left;
+    }
+
+    .hero-stats .stat strong {
+      font-size: 1.4rem;
+      color: var(--primary);
+      display: block;
+    }
+
+    .hero-stats .stat span {
+      font-size: 0.85rem;
+      color: var(--gray);
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 56px;
+    }
+
+    .section-title .label {
+      color: var(--highlight);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 0.8rem;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--primary);
+      margin: 10px 0;
+      font-family: 'Merriweather', serif;
+    }
+
+    .section-title p {
+      color: var(--gray);
+      font-size: 1.05rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .about-text p {
+      color: var(--gray);
+      margin-bottom: 18px;
+      font-size: 1.04rem;
+    }
+
+    .about-text .highlight-box {
+      background: var(--white);
+      border-left: 4px solid var(--highlight);
+      padding: 20px 24px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      margin-top: 20px;
+    }
+
+    .about-text .highlight-box p {
+      margin-bottom: 0;
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    .about-skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .about-skills-grid .skill-item {
+      background: var(--white);
+      padding: 16px 20px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .about-skills-grid .skill-item:hover {
+      border-color: var(--highlight);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .about-skills-grid .skill-item i {
+      color: var(--highlight);
+      font-size: 1.2rem;
+      width: 24px;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+      border-color: var(--highlight);
+    }
+
+    .card .icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(233, 69, 96, 0.08);
+      color: var(--highlight);
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: var(--gray);
+      font-size: 0.98rem;
+    }
+
+    .recent-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .recent-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .recent-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+      border-color: var(--highlight);
+    }
+
+    .recent-card .rc-icon {
+      font-size: 2rem;
+      color: var(--highlight);
+      margin-bottom: 16px;
+    }
+
+    .recent-card h4 {
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .recent-card p {
+      color: var(--gray);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .recent-tag {
+      display: inline-block;
+      margin-top: 16px;
+      background: rgba(233, 69, 96, 0.08);
+      color: var(--highlight);
+      font-weight: 600;
+      font-size: 0.75rem;
+      padding: 5px 16px;
+      border-radius: 999px;
+      align-self: flex-start;
+      letter-spacing: 0.3px;
+      border: 1px solid rgba(233, 69, 96, 0.15);
+    }
+
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .project-item {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px 26px;
+      border: 1px solid var(--border);
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      transition: var(--transition);
+    }
+
+    .project-item:hover {
+      border-color: var(--highlight);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .project-icon {
+      min-width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: rgba(233, 69, 96, 0.08);
+      color: var(--highlight);
+      display: grid;
+      place-items: center;
+      font-size: 1.2rem;
+    }
+
+    .project-item h4 {
+      color: var(--primary);
+      margin-bottom: 4px;
+      font-size: 1.05rem;
+    }
+
+    .project-item p {
+      color: var(--gray);
+      font-size: 0.94rem;
+    }
+
+    .essay-section {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 48px 56px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .essay-section p {
+      color: var(--gray);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .essay-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .essay-section .essay-quote {
+      font-weight: 600;
+      color: var(--primary);
+      border-left: 4px solid var(--highlight);
+      padding-left: 20px;
+      font-style: italic;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .skill-tag {
+      background: var(--white);
+      border: 1px solid var(--border);
+      color: var(--primary);
+      padding: 10px 22px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: var(--transition);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .skill-tag:hover {
+      border-color: var(--highlight);
+      color: var(--highlight);
+      transform: translateY(-2px);
+    }
+
+    .contact-box {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      padding: 48px 40px;
+      text-align: center;
+      max-width: 780px;
+      margin: auto;
+    }
+
+    .contact-box h2 {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .contact-box p {
+      color: var(--gray);
+      margin-bottom: 28px;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .socials a {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--light);
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      font-size: 1.3rem;
+      transition: var(--transition);
+      border: 1px solid var(--border);
+    }
+
+    .socials a:hover {
+      background: var(--highlight);
+      color: var(--white);
+      transform: translateY(-4px);
+      border-color: var(--highlight);
+    }
+
+    footer {
+      background: var(--primary);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 32px 0;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    footer .footer-name {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-image img {
+        height: 320px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .cards,
+      .recent-grid,
+      .project-list {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .essay-section {
+        padding: 32px 24px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-links {
+        display: none;
+      }
+
+      .cards,
+      .recent-grid,
+      .project-list,
+      .about-skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 60px 0 40px;
+      }
+
+      .section {
+        padding: 56px 0;
+      }
+
+      .contact-box {
+        padding: 32px 24px;
+      }
+
+      .hero-stats {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .essay-section {
+        padding: 24px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container navbar">
+    <a href="#" class="logo">Arinda<span>Iradi</span></a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#essay">Essay</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-badge">
+          <i class="fa-solid fa-code"></i> Computer Scientist & AI Developer
+        </div>
+        <h1>Building <span class="highlight-text">Intelligent</span> Solutions for Real-World Problems</h1>
+        <p>
+          Arinda Iradi is a computer scientist, AI developer, and data science enthusiast.
+          He specializes in machine learning, web development, and digital innovation.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-accent">
+            <i class="fa-solid fa-rocket"></i> View Projects
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fa-solid fa-envelope"></i> Contact
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>6+</strong>
+            <span>Projects Delivered</span>
+          </div>
+          <div class="stat">
+            <strong>4</strong>
+            <span>Tech Stacks</span>
+          </div>
+          <div class="stat">
+            <strong>3</strong>
+            <span>Domains: AI, Web, Data</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/images/iradi.jpg" alt="Arinda Iradi - Computer Scientist" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-title">
+        <span class="label">About</span>
+        <h2>Who I Am</h2>
+        <p>Computer scientist with a passion for AI, data, and building meaningful technology.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm Arinda Iradi — a computer scientist based in Uganda with a strong focus on
+            artificial intelligence, data science, and full-stack development. I enjoy
+            turning complex problems into elegant, functional solutions.
+          </p>
+          <p>
+            My work spans across machine learning, web platforms, and data-driven systems.
+            I believe technology should be accessible, inclusive, and impactful.
+          </p>
+          <div class="highlight-box">
+            <p><i class="fa-solid fa-quote-left" style="color: var(--highlight); margin-right: 10px;"></i>
+              I build systems that learn, adapt, and empower people.
+            </p>
+          </div>
+        </div>
+        <div class="about-skills-grid">
+          <div class="skill-item"><i class="fa-brands fa-python"></i> Python / TensorFlow</div>
+          <div class="skill-item"><i class="fa-brands fa-js"></i> JavaScript / React</div>
+          <div class="skill-item"><i class="fa-solid fa-database"></i> SQL / NoSQL</div>
+          <div class="skill-item"><i class="fa-solid fa-cloud"></i> Cloud / DevOps</div>
+          <div class="skill-item"><i class="fa-solid fa-robot"></i> NLP / Computer Vision</div>
+          <div class="skill-item"><i class="fa-solid fa-chart-simple"></i> Data Visualization</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SHORT ESSAY ===== -->
+  <section class="section" id="essay" style="background: var(--white);">
+    <div class="container">
+      <div class="section-title">
+        <span class="label">Essay</span>
+        <h2>My Journey in Tech</h2>
+        <p>A brief reflection on what drives my work.</p>
+      </div>
+      <div class="essay-section">
+        <p>
+          Arinda Iradi is a computer scientist and AI developer passionate about building intelligent systems that solve real-world problems. His work spans machine learning, data science, and web development, with a focus on creating practical, human-centered technology.
+        </p>
+        <p>
+          Recent projects include an <strong>AI Agriculture Tutor</strong> that provides farmers with real-time crop advice and pest detection, and a <strong>Business Performance Dashboard</strong> that helps SMEs visualize key metrics. He has also developed <strong>TrustVote</strong>, a blockchain-based voting system for transparent digital governance, and a <strong>3D Compiler Visualizer</strong> that makes complex computer science concepts accessible to learners.
+        </p>
+        <p class="essay-quote">
+          "Driven by curiosity and a commitment to tech-for-good, I combine technical depth with a user-first mindset. My goal is simple: build technology that matters, empowers communities, and pushes the boundaries of innovation."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOCUS AREAS ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <span class="label">Focus Areas</span>
+        <h2>What I Work On</h2>
+        <p>My core technical expertise and areas of interest.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="icon"><i class="fa-solid fa-brain"></i></div>
+          <h3>Artificial Intelligence</h3>
+          <p>Building intelligent systems using machine learning, deep learning, and NLP to automate and augment decision-making.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>Data Science</h3>
+          <p>Extracting insights from data through statistical analysis, visualization, and predictive modeling.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Web Development</h3>
+          <p>Creating responsive, performant web applications with modern frontend and backend frameworks.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+          <h3>Cloud & DevOps</h3>
+          <p>Deploying scalable applications using cloud infrastructure, CI/CD pipelines, and containerization.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><i class="fa-solid fa-microchip"></i></div>
+          <h3>Edge AI</h3>
+          <p>Deploying lightweight AI models on edge devices for real-time, low-latency applications.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><i class="fa-solid fa-people-group"></i></div>
+          <h3>Tech for Good</h3>
+          <p>Applying technology to solve challenges in agriculture, health, education, and sustainability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RECENT PROJECTS ===== -->
+  <section class="section" id="projects" style="background: var(--white);">
+    <div class="container">
+      <div class="section-title">
+        <span class="label">Recent Work</span>
+        <h2>Latest Projects</h2>
+        <p>Recent initiatives and prototypes I've been working on.</p>
+      </div>
+      <div class="recent-grid">
+        <div class="recent-card">
+          <div class="rc-icon"><i class="fa-solid fa-seedling"></i></div>
+          <h4>AI Agriculture Tutor</h4>
+          <p>AI-powered assistant providing farmers with real-time crop advice, pest identification, and weather-based recommendations using NLP and computer vision.</p>
+          <span class="recent-tag">#AgriTech</span>
+        </div>
+        <div class="recent-card">
+          <div class="rc-icon"><i class="fa-solid fa-chart-pie"></i></div>
+          <h4>Business Performance Dashboard</h4>
+          <p>Interactive analytics dashboard visualizing KPIs, sales trends, and operational metrics for SMEs with real-time data updates.</p>
+          <span class="recent-tag">#DataViz</span>
+        </div>
+        <div class="recent-card">
+          <div class="rc-icon"><i class="fa-solid fa-trash-can"></i></div>
+          <h4>AI Waste Classifier</h4>
+          <p>Computer vision prototype that automatically sorts plastic, metal, and e-waste using a custom CNN model.</p>
+          <span class="recent-tag">#MachineLearning</span>
+        </div>
+        <div class="recent-card">
+          <div class="rc-icon"><i class="fa-solid fa-cube"></i></div>
+          <h4>3D Compiler Visualizer</h4>
+          <p>Interactive educational tool that visualizes compiler phases (lexical, syntax, semantic) in 3D space.</p>
+          <span class="recent-tag">#EdTech</span>
+        </div>
+        <div class="recent-card">
+          <div class="rc-icon"><i class="fa-solid fa-vote-yea"></i></div>
+          <h4>TrustVote</h4>
+          <p>Blockchain‑based voting dApp with verifiable ballots, built on Ethereum testnet for transparency.</p>
+          <span class="recent-tag">#Blockchain</span>
+        </div>
+        <div class="recent-card">
+          <div class="rc-icon"><i class="fa-solid fa-notes-medical"></i></div>
+          <h4>E-Health Records System</h4>
+          <p>Secure, patient‑centric medical records system with role‑based access and audit trails for clinics.</p>
+          <span class="recent-tag">#HealthTech</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SELECTED PROJECTS ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <span class="label">Portfolio</span>
+        <h2>Selected Projects</h2>
+        <p>A broader look at my work across different domains.</p>
+      </div>
+      <div class="project-list">
+        <div class="project-item">
+          <div class="project-icon"><i class="fa-solid fa-robot"></i></div>
+          <div>
+            <h4>AI Agriculture Tutor</h4>
+            <p>NLP and computer vision system for real-time crop advice and pest detection.</p>
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-icon"><i class="fa-solid fa-chart-simple"></i></div>
+          <div>
+            <h4>Business Performance Dashboard</h4>
+            <p>Interactive KPI dashboard with predictive analytics for SMEs.</p>
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div>
+            <h4>TrustVote</h4>
+            <p>Blockchain-based voting system for transparent and verifiable elections.</p>
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-icon"><i class="fa-solid fa-cube"></i></div>
+          <div>
+            <h4>3D Compiler Visualizer</h4>
+            <p>Interactive 3D platform for understanding compiler phases.</p>
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-icon"><i class="fa-solid fa-notes-medical"></i></div>
+          <div>
+            <h4>E-Health Records System</h4>
+            <p>Secure digital health records with role-based access control.</p>
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div>
+            <h4>Kablink</h4>
+            <p>Student engagement and networking platform for university communities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section" id="skills" style="background: var(--white);">
+    <div class="container">
+      <div class="section-title">
+        <span class="label">Skills</span>
+        <h2>Tech Stack & Expertise</h2>
+        <p>Technologies and tools I work with regularly.</p>
+      </div>
+      <div class="skills">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">TensorFlow</span>
+        <span class="skill-tag">PyTorch</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">Node.js</span>
+        <span class="skill-tag">PHP</span>
+        <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">MongoDB</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">AWS</span>
+        <span class="skill-tag">Git</span>
+        <span class="skill-tag">Data Visualization</span>
+        <span class="skill-tag">NLP</span>
+        <span class="skill-tag">Computer Vision</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <h2>Let's Connect</h2>
+        <p>
+          I'm always open to collaborating on interesting projects, research, or
+          innovative ideas. Feel free to reach out.
+        </p>
+        <a href="mailto:arinda.iradi@example.com" class="btn btn-accent">
+          <i class="fa-solid fa-envelope"></i> arinda.iradi@example.com
+        </a>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/arindairadi" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/arindairadi" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://twitter.com/ArindaIrad53871" aria-label="X">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 <span class="footer-name">Arinda Iradi</span> — Computer Scientist & AI Developer</p>
+  </div>
+</footer>
+
+</body>
+</html>
